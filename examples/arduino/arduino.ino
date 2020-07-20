@@ -1,15 +1,7 @@
-# TimeProfiler
-
-Time profiler for Arduino
-
-
-## Usage
-
-``` C++
 #include <TimeProfiler.h>
 
-void setup()
-{
+void setup() {
+
     Serial.begin(115200);
     delay(2000);
 
@@ -57,24 +49,7 @@ void setup()
     Serial.print("c     : ");
     Serial.println(TimeProfiler.getProfile("c"));
 }
-```
 
+void loop() {
 
-## APIs
-
-``` C++
-const ProfileMap& getProfiles() const;
-float getProfile(const StringType& name) const;
-void clear();
-```
-
-
-## Embedded Libraries
-
-- [ArxContainer v0.3.8](https://github.com/hideakitai/ArxContainer)
-
-
-## License
-
-MIT
-
+}
