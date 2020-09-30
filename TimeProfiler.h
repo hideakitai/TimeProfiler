@@ -5,9 +5,6 @@
 #ifdef ARDUINO
     #include <Arduino.h>
     #include "util/ArxContainer/ArxContainer.h"
-    #ifndef ARX_CONTAINER_DISABLED
-        #include <map>
-    #endif
 #else
     #include <map>
     #include <string>
@@ -20,14 +17,14 @@ namespace time {
 
 #ifdef ARDUINO
     using StringType = String;
-    #ifdef ARX_CONTAINER_DISABLED
-        using ProfileData = arx::pair<StringType, float>;
-        using ProfileMap = arx::map<StringType, float>;
-        using namespace arx;
-    #else
+    #if ARX_HAVE_LIBSTDCPLUSPLUS >= 201103L // Have libstdc++11
         using ProfileData = std::pair<StringType, float>;
         using ProfileMap = std::map<StringType, float>;
         using namespace std;
+    #else
+        using ProfileData = arx::pair<StringType, float>;
+        using ProfileMap = arx::map<StringType, float>;
+        using namespace arx;
     #endif
     using TimePoint = uint32_t;
     using MicroSeconds = uint32_t;
