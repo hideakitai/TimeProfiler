@@ -71,7 +71,7 @@ void clear();
 
 ## Embedded Libraries
 
-- [ArxContainer v0.3.11](https://github.com/hideakitai/ArxContainer)
+- [ArxContainer v0.3.12](https://github.com/hideakitai/ArxContainer)
 
 
 ## License
