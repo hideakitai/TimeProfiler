@@ -69,9 +69,9 @@ void clear();
 ```
 
 
-## Embedded Libraries
+## Dependent Libraries
 
-- [ArxContainer v0.4.0](https://github.com/hideakitai/ArxContainer)
+- [ArxContainer](https://github.com/hideakitai/ArxContainer)
 
 
 ## License
