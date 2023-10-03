@@ -95,5 +95,6 @@ jobs:
           sketch-paths: |
             - examples
           libraries: |
-            - name: TimeProfiler
+            - source-path: ./
+            - name: ArxContainer
           verbose: true
