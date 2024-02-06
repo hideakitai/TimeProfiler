@@ -17,6 +17,6 @@
     "platforms": "*",
     "dependencies":
     {
-        "hideakitai/ArxContainer": ">=0.6.1"
+        "hideakitai/ArxContainer": ">=0.6.0"
     }
 }
