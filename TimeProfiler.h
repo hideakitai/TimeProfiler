@@ -20,11 +20,9 @@ namespace time {
     #if ARX_HAVE_LIBSTDCPLUSPLUS >= 201103L // Have libstdc++11
         using ProfileData = std::pair<StringType, float>;
         using ProfileMap = std::map<StringType, float>;
-        using namespace std;
     #else
-        using ProfileData = arx::pair<StringType, float>;
-        using ProfileMap = arx::map<StringType, float>;
-        using namespace arx;
+        using ProfileData = arx::stdx::pair<StringType, float>;
+        using ProfileMap = arx::stdx::map<StringType, float>;
     #endif
     using TimePoint = uint32_t;
     using MicroSeconds = uint32_t;
@@ -65,7 +63,7 @@ namespace time {
             if (it != profiles.end())
                 profiles[name] = ms;
             else
-                profiles.emplace(make_pair(name, ms));
+                profiles.emplace(std::make_pair(name, ms));
         }
 
         const ProfileMap& getProfiles() const
